@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mesaj gönder</title>
+    <style>
+        #message {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: none;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>Mesaj Göster</button>
+    <div id="message">Bu bir mesajdır!</div>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+            seeTimeOut(() => {
+                message.style.display = 'none';
+            },3000);
+        });
+    </script>
+</body>
+
+</html>

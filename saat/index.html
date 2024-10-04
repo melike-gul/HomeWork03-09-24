@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saat</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #saat {
+            font-size: 80px;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="saat"></div>
+    
+    <script>
+        function saatiGoster(){
+            const now = new Date();
+            const saat = now.getHours().toString().padStart(2, '0');
+            const dakika = now.getMinutes().toString().padStart(2, '0');
+            const saniye = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('saat').textContent = '${saat}:${dakika}:${saniye}';
+        }
+        setInterval(saatiGoster, 1000);
+        saatiGoster();
+    </script>
+</body>
+
+</html>

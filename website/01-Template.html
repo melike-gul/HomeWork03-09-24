@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        header nav a{
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        header nav a:hover{
+            background-color: #575757;
+        }
+        section{
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        #home {
+            background-color: #f4f4f4;
+        }
+        #skills {
+            background-color: #eaeaea;
+        }
+        #about {
+            background-color: #ddd;
+        }
+        #projects{
+            background-color: #ccc;
+        }
+        #contact {
+            background-color: #bbb;
+        }
+        .card {
+            display: inline-block;
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0,1);
+            text-align: left;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        form input, form textarea {
+            margin:10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+        form button{
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover{
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Anasayfa</a>
+            <a href="#skills">Yetenekler</a>
+            <a href="#about">Hakkımda</a>
+            <a href="#projects">Çalışmalar</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Hoş Geldiniz</h1>
+        <p>Benim adım Melike GÜL, web geliştirme ve yazılım geliştirme üzerine çalışiyorum.</p>
+    </section>
+    <section id="skills">
+        <h2>Yeteneklerim</h2>
+        <div>
+            <p><strong>HTML:</strong> 80%</p>
+            <p><strong>CSS:</strong> 70%</p>
+            <p><strong>JavaScript:</strong> 60%</p>
+            <p><strong>C#:</strong> 75%</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>Hakkımda</h2>
+        <p>18 yaşındayım ve Backend yazılım Geliştirme üzerine eğitim alıyorum. Kariyerimde hızla ilerlemeyi ve yapay zeka </p>
+        <p>CV'mde: Backend Developer,Veritabanı Yönetimi, SQL ve Geliştirme gibi konularda eğitim aldığımı görebilirsiniz</p>
+    </section>
+    <section id="projects">
+        <h2>Projelerim</h2>
+        <div class="card">
+            <h3>Melike Portfolio</h3>
+            <p>Kütüphane yönetimi kolaytıran bir sistem tasarladım</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>İletişim</h2>
+        <form >
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-mail Adresiniz" required>
+            <textarea placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+</body>
+
+</html>

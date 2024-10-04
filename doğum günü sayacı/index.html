@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğum Günü Sayacı</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+        }
+        #countdown {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown"></div>
+    <script>
+        const dogumGunu = new Date("2024-11-20T00:00:00").getTime();
+
+        function geriSayim() {
+            const simdi = new Date().getTime();
+            const fark = dogumGunu - simdi;
+
+            const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+            const saat = Math.floor((fark % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const dakika = Math.floor((fark % (1000 * 60 * 60)) / (1000 * 60));
+            const saniye = Math.floor((fark % (1000 * 60)) / 1000);
+            
+            
+            if (fark > 0) {
+                document.getElementById('countdown').textContent = 
+                    `${gun} gün, ${saat} saat, ${dakika} dakika, ${saniye} saniye kaldı.`;
+            } else {
+                document.getElementById('countdown').textContent = "Doğum günü geçti!";
+
+            }
+        }
+
+        setInterval(geriSayim, 1000);
+    </script>
+</body>
+</html>
